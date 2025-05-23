@@ -95,3 +95,4 @@
 /Users/fdnthebest/Projects/Portfolio/AmadouDialloPortfolio/obj/Debug/net9.0/AmadouDialloPortfolio.genruntimeconfig.cache
 /Users/fdnthebest/Projects/Portfolio/AmadouDialloPortfolio/obj/Debug/net9.0/ref/AmadouDialloPortfolio.dll
 /Users/fdnthebest/Projects/Portfolio/AmadouDialloPortfolio/obj/Debug/net9.0/compressed/oa7muz0hy8-g4fwibq3dc.gz
+/Users/fdnthebest/Projects/Portfolio/AmadouDialloPortfolio/obj/Debug/net9.0/AmadouDialloPortfolio.sourcelink.json

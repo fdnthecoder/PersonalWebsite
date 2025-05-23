@@ -1,0 +1,51 @@
+# Build output
+bin/
+obj/
+publish/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Dotnet Core
+*.dll
+*.pdb
+*.exe
+*.log
+
+# Publish folder (output of dotnet publish)
+wwwroot/publish/
+
+# ASP.NET temporary files
+project.lock.json
+project.fragment.lock.json
+
+# NuGet Packages
+*.nupkg
+packages/
+
+# Resharper files
+_ReSharper*/
+*.DotSettings.user
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+secrets.json
+*.PublishSettings
+*.publishsettings
+
+# Others
+*.vs/
+

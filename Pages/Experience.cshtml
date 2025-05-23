@@ -1,0 +1,51 @@
+@page
+@using AmadouDialloPortfolio.Data
+@{
+    ViewData["Title"] = "Experience";
+    var experiences = PortfolioData.GetExperience();
+}
+
+<h1 class="mb-4">Professional Experience</h1>
+
+@foreach (var exp in experiences)
+{
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="card-title text-primary">@exp.Position</h4>
+                    <h5 class="text-muted">@exp.Company</h5>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-secondary">@exp.Duration</span>
+                    <br>
+                    <small class="text-muted">@exp.Location</small>
+                </div>
+            </div>
+            <hr>
+            <ul class="list-unstyled">
+                @foreach (var achievement in exp.Achievements)
+                {
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        @achievement
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}
+
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title">Key Skills Developed</h5>
+        <div class="row">
+            @foreach (var skill in PortfolioData.GetSkills())
+            {
+                <div class="col-md-3 col-sm-4 col-6 mb-2">
+                    <span class="badge bg-primary">@skill</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>

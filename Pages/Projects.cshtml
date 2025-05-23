@@ -1,0 +1,43 @@
+@page
+@using AmadouDialloPortfolio.Data
+@{
+    ViewData["Title"] = "Projects";
+    var projects = PortfolioData.GetProjects();
+}
+
+<h1 class="mb-4">Projects</h1>
+
+<div class="row">
+    @foreach (var project in projects)
+    {
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">@project.Name</h5>
+                    <span class="badge bg-info">@project.Category</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">@project.Description</p>
+                    <div class="mb-3">
+                        <strong>Technologies:</strong>
+                        <div class="mt-2">
+                            @foreach (var tech in project.Technologies)
+                            {
+                                <span class="badge bg-secondary me-1">@tech</span>
+                            }
+                        </div>
+                    </div>
+                    <small class="text-muted">@project.Date</small>
+                </div>
+                @if (!string.IsNullOrEmpty(project.GitHubLink))
+                {
+                    <div class="card-footer">
+                        <a href="@project.GitHubLink" class="btn btn-outline-primary btn-sm" target="_blank">
+                            <i class="fab fa-github me-1"></i> View on GitHub
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>

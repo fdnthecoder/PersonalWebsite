@@ -1,4 +1,4 @@
-.PHONY: deploy push
+.PHONY: local prod all # Declare targets as phony so they are always executed
 
 local:
 	dotnet build 
@@ -9,4 +9,3 @@ prod:
 	git push
 
 all: push deploy
-

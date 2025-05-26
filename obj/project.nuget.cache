@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7ZKTgb6L1c=",
+  "dgSpecHash": "okpHLxe/FhM=",
   "success": true,
   "projectFilePath": "/Users/fdnthebest/Projects/Portfolio/AmadouDialloPortfolio/AmadouDialloPortfolio.csproj",
-  "expectedPackageFiles": [
-    "/Users/fdnthebest/.nuget/packages/microsoft.netcore.app.ref/8.0.15/microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
-    "/Users/fdnthebest/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
-    "/Users/fdnthebest/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.15/microsoft.netcore.app.host.osx-arm64.8.0.15.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

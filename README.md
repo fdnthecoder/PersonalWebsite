@@ -63,8 +63,8 @@ AmadouDialloPortfolio/
 ## 📞 Contact
 
 **🌐 Website:** [amadoudiallo.dev](https://amadoudiallo.dev)  
-**💼 LinkedIn:** [linkedin.com/in/amadou-diallo](https://linkedin.com/in/amadou-diallo)  
-**📧 Email:** contact@amadoudiallo.dev
+**💼 LinkedIn:** [linkedin.com/in/amadouodiallo]https://www.linkedin.com/in/amadouodiallo/)  
+**📧 Email:** adialo324@gmail.com
 
 ---
 

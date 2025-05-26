@@ -49,3 +49,52 @@ secrets.json
 # Others
 *.vs/
 
+# Local history for Visual Studio Code
+.history/
+
+# Logs
+logs/
+*.log
+*.tlog
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Crash reports
+crash.log
+
+# User-specific files (Visual Studio)
+*.rsuser
+*.sln.docstates
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Visual Studio working files
+.vs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Docker files
+docker-compose.override.yml
+.docker/
+
+# Azure Functions
+local.settings.json
+
+# Static website artifacts
+dist/
+out/
+
+# Lock files
+yarn.lock
+pnpm-lock.yaml
+
+# Python virtual environments (if applicable)
+venv/
+

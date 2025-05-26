@@ -1,13 +1,9 @@
 .PHONY: deploy push
 
-run:
+local:
 	dotnet build 
 	dotnet run --project ./AmadouDialloPortfolio.csproj
-deploy:
-	dotnet publish -c Release -o ./publish
-	# add your deployment commands here, e.g., az webapp deploy
-
-push:
+prod:
 	git add .
 	git commit -m "auto push" # give option to input commit message else use default
 	git push

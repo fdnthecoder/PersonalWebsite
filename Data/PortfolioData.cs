@@ -83,11 +83,13 @@ namespace AmadouDialloPortfolio.Data
         {
             return new List<string>
             {
-                "Java", "Python", "C#", "TypeScript",
+                "Java Spring Boot", "Python", "C#", "TypeScript",
                 "AWS (S3, Lambda, SageMaker, CDK, AppConfig)",
                 "GitHub Actions", "Travis CI", "Infrastructure as Code",
                 "Microservices", "REST APIs", "CI/CD",
-                "Machine Learning", "Data Engineering"
+                "Machine Learning", "Data Engineering",
+                "Agile Methodologies", "Team Collaboration", ".NET Core", 
+                "Bootstrap", "HTML", "CSS", "JavaScript"
             };
         }
     }

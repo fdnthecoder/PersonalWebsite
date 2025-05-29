@@ -78,7 +78,7 @@ namespace AmadouDialloPortfolio.Data
                 },
                 new ProjectItem
                 {
-                    Name = "My Portfolio Website",
+                    Name = "This Website",
                     Description = "Personal portfolio website built with .NET Core, showcasing my work, resume, and contact information. Built with Razor Pages and deployed using GitHub Actions and Render.",
                     Technologies = new List<string> { ".NET Core", "Razor Pages", "C#", "Render", "GitHub Actions", "Bootstrap", "HTML", "CSS", "JavaScript" },
                     Date = "05/2025",

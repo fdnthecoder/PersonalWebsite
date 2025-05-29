@@ -75,6 +75,14 @@ namespace AmadouDialloPortfolio.Data
                     Technologies = new List<string> { "Unity 3D", "C#", "Adobe Photoshop" },
                     Date = "06/2018",
                     Category = "Award-Winning"
+                },
+                new ProjectItem
+                {
+                    Name = "My Portfolio Website",
+                    Description = "Personal portfolio website built with .NET Core, showcasing my work, resume, and contact information. Built with Razor Pages and deployed using GitHub Actions and Render.",
+                    Technologies = new List<string> { ".NET Core", "Razor Pages", "C#", "Render", "GitHub Actions", "Bootstrap", "HTML", "CSS", "JavaScript" },
+                    Date = "05/2025",
+                    Category = "Portfolio"
                 }
             };
         }

@@ -20,7 +20,7 @@ Software Development Engineer with **2+ years at Amazon**, specializing in cloud
 ## 🛠️ Tech Stack
 
 - **Backend:** ASP.NET Core 8.0, C#, Razor Pages
-- **Frontend:** HTML5, CSS3, Bootstrap 5, JavaScript
+- **Frontend:** HTML5, CSS3, Bootstrap 5, JavaScript, CSS Variables
 - **Cloud:** AWS (S3, Lambda, SageMaker, CDK, AppConfig)
 - **Tools:** Git, GitHub Actions, Travis CI
 
@@ -51,6 +51,8 @@ AmadouDialloPortfolio/
 - **Project Portfolio:** Professional, open-source, and award-winning projects
 - **Skills Overview:** Programming languages, cloud platforms, and tools
 - **Responsive Design:** Mobile-first with Bootstrap 5
+- **Dark Mode Support:** System preference detection with manual toggle
+- **Theme Persistence:** Saves user preference between sessions
 - **Performance Optimized:** Server-side rendering and fast loading
 
 ## 🎯 Highlights
@@ -59,6 +61,18 @@ AmadouDialloPortfolio/
 - **Open Source:** Indra Agent-Based Modeling (60K+ lines, 30+ contributors)
 - **Awards:** Games for Change winner - "Sources, Please"
 - **Research:** Epidemic modeling with automated testing and CI/CD
+
+
+## 🎨 Dark Mode
+
+This portfolio features a fully implemented dark mode with the following capabilities:
+
+- **System Preference Detection:** Automatically applies your system's light/dark preference
+- **Manual Toggle:** Easily switch between light and dark themes with the theme toggle button
+- **Persistent Preferences:** Your theme choice is saved between sessions using localStorage
+- **Smooth Transitions:** Elegant animations when switching between themes
+- **Comprehensive Implementation:** All UI elements properly themed for both light and dark modes
+
 
 ## 📞 Contact
 

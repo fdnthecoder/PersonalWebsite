@@ -9,6 +9,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <script>
+        // Immediately apply saved theme to prevent flickering
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    // Use system preference if no saved preference
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (error) {
+                console.error('Error applying initial theme:', error);
+            }
+        })();
+    </script>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
@@ -31,6 +47,9 @@
                             <a class="nav-link" asp-area="" asp-page="/Contact">Contact</a>
                         </li>
                     </ul>
+                    <button id="theme-toggle" class="theme-toggle ms-auto" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -41,7 +60,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted bg-light mt-5">
+    <footer class="border-top footer text-muted mt-5">
         <div class="container text-center py-3">
             &copy; 2024 Amadou Diallo - Software Development Engineer
         </div>

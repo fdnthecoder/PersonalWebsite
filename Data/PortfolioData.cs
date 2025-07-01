@@ -58,7 +58,8 @@ namespace AmadouDialloPortfolio.Data
                     Description = "Contributed to open source project for exploring natural phenomena modeling in Python. Maintained over 60K lines of code collaborating with 30+ contributors.",
                     Technologies = new List<string> { "Python", "GitHub", "Open Source" },
                     Date = "05/2021",
-                    Category = "Open Source"
+                    Category = "Open Source",
+                    ProjectLink = "https://github.com/gcallah/IndraABM"
                 },
                 new ProjectItem
                 {
@@ -66,7 +67,8 @@ namespace AmadouDialloPortfolio.Data
                     Description = "Researched and developed a model evaluating effectiveness of social distancing and mask-wearing during epidemics. Implemented automated testing and CI/CD.",
                     Technologies = new List<string> { "Python", "NoseTest", "Travis CI", "Git" },
                     Date = "08/2020",
-                    Category = "Academic"
+                    Category = "Academic",
+                    ProjectLink = "https://shorturl.at/s5pQF"
                 },
                 new ProjectItem
                 {
@@ -74,7 +76,8 @@ namespace AmadouDialloPortfolio.Data
                     Description = "Game promoting news literacy using Unity 3D. Won Games for Change 'News Literacy' Prize out of 1920 submissions.",
                     Technologies = new List<string> { "Unity 3D", "C#", "Adobe Photoshop" },
                     Date = "06/2018",
-                    Category = "Award-Winning"
+                    Category = "Award-Winning",
+                    ProjectLink = "https://amadou1134.itch.io/sources-please"
                 },
                 new ProjectItem
                 {
@@ -82,7 +85,8 @@ namespace AmadouDialloPortfolio.Data
                     Description = "Personal portfolio website built with .NET Core, showcasing my work, resume, and contact information. Built with Razor Pages and deployed using GitHub Actions and Render.",
                     Technologies = new List<string> { ".NET Core", "Razor Pages", "C#", "Render", "GitHub Actions", "Bootstrap", "HTML", "CSS", "JavaScript" },
                     Date = "05/2025",
-                    Category = "Portfolio"
+                    Category = "Portfolio",
+                    ProjectLink = "https://amadoudiallo.dev/"
                 }
             };
         }

@@ -29,11 +29,11 @@
                     </div>
                     <small class="text-muted">@project.Date</small>
                 </div>
-                @if (!string.IsNullOrEmpty(project.GitHubLink))
+                @if (!string.IsNullOrEmpty(project.ProjectLink))
                 {
                     <div class="card-footer">
-                        <a href="@project.GitHubLink" class="btn btn-outline-primary btn-sm" target="_blank">
-                            <i class="fab fa-github me-1"></i> View on GitHub
+                        <a href="@project.ProjectLink" class="btn btn-outline-primary btn-sm" target="_blank">
+                             View Project
                         </a>
                     </div>
                 }

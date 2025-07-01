@@ -59,7 +59,9 @@ namespace AmadouDialloPortfolio.Data
                     Technologies = new List<string> { "Python", "GitHub", "Open Source" },
                     Date = "05/2021",
                     Category = "Open Source",
-                    ProjectLink = "https://github.com/gcallah/IndraABM"
+                    ProjectLink = "https://github.com/gcallah/IndraABM",
+                    ProjectLinkText = "See Repo"
+
                 },
                 new ProjectItem
                 {
@@ -68,7 +70,8 @@ namespace AmadouDialloPortfolio.Data
                     Technologies = new List<string> { "Python", "NoseTest", "Travis CI", "Git" },
                     Date = "08/2020",
                     Category = "Academic",
-                    ProjectLink = "https://photos.google.com/share/AF1QipOkpivUfPvxJ4GTQnuoDeJZZvUr1YmVbQUHCV0H9eXsORVk8Bpm3MgCrGDEjQYwIQ/photo/AF1QipO_d6Iy90tKLmExDvi77MVc-BKBotN8F1P9Md34?key=Y2ZNNUNaRUNZLVkyNWNvcGFTWnEyOEhJTmVEcVp3"
+                    ProjectLink = "https://photos.google.com/share/AF1QipOkpivUfPvxJ4GTQnuoDeJZZvUr1YmVbQUHCV0H9eXsORVk8Bpm3MgCrGDEjQYwIQ/photo/AF1QipO_d6Iy90tKLmExDvi77MVc-BKBotN8F1P9Md34?key=Y2ZNNUNaRUNZLVkyNWNvcGFTWnEyOEhJTmVEcVp3",
+                    ProjectLinkText = "See Research Poster"
                 },
                 new ProjectItem
                 {
@@ -77,7 +80,8 @@ namespace AmadouDialloPortfolio.Data
                     Technologies = new List<string> { "Unity 3D", "C#", "Adobe Photoshop" },
                     Date = "06/2018",
                     Category = "Award-Winning",
-                    ProjectLink = "https://amadou1134.itch.io/sources-please"
+                    ProjectLink = "https://amadou1134.itch.io/sources-please",
+                    ProjectLinkText = "Play Sources-Please"
                 },
                 new ProjectItem
                 {
@@ -86,7 +90,8 @@ namespace AmadouDialloPortfolio.Data
                     Technologies = new List<string> { ".NET Core", "Razor Pages", "C#", "Render", "GitHub Actions", "Bootstrap", "HTML", "CSS", "JavaScript" },
                     Date = "05/2025",
                     Category = "Portfolio",
-                    ProjectLink = "https://amadoudiallo.dev/"
+                    ProjectLink = "https://amadoudiallo.dev/",
+                    ProjectLinkText = "See Website"
                 }
             };
         }

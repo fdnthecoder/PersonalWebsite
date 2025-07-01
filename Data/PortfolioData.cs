@@ -68,7 +68,7 @@ namespace AmadouDialloPortfolio.Data
                     Technologies = new List<string> { "Python", "NoseTest", "Travis CI", "Git" },
                     Date = "08/2020",
                     Category = "Academic",
-                    ProjectLink = "https://shorturl.at/s5pQF"
+                    ProjectLink = "https://photos.google.com/share/AF1QipOkpivUfPvxJ4GTQnuoDeJZZvUr1YmVbQUHCV0H9eXsORVk8Bpm3MgCrGDEjQYwIQ/photo/AF1QipO_d6Iy90tKLmExDvi77MVc-BKBotN8F1P9Md34?key=Y2ZNNUNaRUNZLVkyNWNvcGFTWnEyOEhJTmVEcVp3"
                 },
                 new ProjectItem
                 {

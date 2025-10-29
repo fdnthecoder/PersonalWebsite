@@ -380,7 +380,7 @@ html, body {
     bottom: 10px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: white ;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.8em;
@@ -389,4 +389,6 @@ html, body {
 
 .visitor-counts span {
     margin-left: 10px;
+    color: white !important
+    
 }

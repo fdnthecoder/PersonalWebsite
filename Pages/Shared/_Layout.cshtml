@@ -1,4 +1,4 @@
-﻿@using AmadouDialloPortfolio.Services
+@using AmadouDialloPortfolio.Services
 @inject VisitorCountService VisitorCountService
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +67,17 @@
         <div class="container text-center py-3">
             &copy; 2024 Amadou Diallo - Software Development Engineer
             <div class="visitor-counts mt-2">
+                @{
+                    var pageName = (ViewContext.RouteData.Values["page"] as string)?.TrimStart('/') ?? "Index";
+                    if (pageName == "Index")
+                    {
+                        <span>Total Visits: @visitorData.TotalVisits</span>
+                    }
+                    else if (visitorData.PageVisits.TryGetValue(pageName, out var pageVisits))
+                    {
+                        <span>@pageName Visits: @pageVisits</span>
+                    }
+                }
             </div>
         </div>
     </footer>

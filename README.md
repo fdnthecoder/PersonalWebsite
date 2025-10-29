@@ -52,6 +52,7 @@ AmadouDialloPortfolio/
 - **Skills Overview:** Programming languages, cloud platforms, and tools
 - **Responsive Design:** Mobile-first with Bootstrap 5
 - **Dark Mode Support:** System preference detection with manual toggle
+- **Live Visitor Counter:** Tracks total site visits and individual page views, stored in a `visitor_counts.json` file. The home page displays the total count, while other pages show their specific view count.
 - **Theme Persistence:** Saves user preference between sessions
 - **Performance Optimized:** Server-side rendering and fast loading
 

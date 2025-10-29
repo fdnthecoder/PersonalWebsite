@@ -1,8 +1,13 @@
 @page
 @using AmadouDialloPortfolio.Data
+@using AmadouDialloPortfolio.Services
+@inject VisitorCountService VisitorCountService
 @{
     ViewData["Title"] = "Projects";
     var projects = PortfolioData.GetProjects();
+    VisitorCountService.IncrementTotalVisits();
+    VisitorCountService.IncrementPageVisit("Projects");
+    var visitorData = VisitorCountService.GetVisitorData();
 }
 
 <h1 class="mb-4">Projects</h1>
@@ -39,5 +44,12 @@
                 }
             </div>
         </div>
+    }
+</div>
+
+<div class="visitor-counts mt-2">
+    @if (visitorData.PageVisits.TryGetValue("Projects", out var projectsVisits))
+    {
+        <span>Projects Visits: @projectsVisits</span>
     }
 </div>

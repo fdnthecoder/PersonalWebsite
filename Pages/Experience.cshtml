@@ -1,8 +1,13 @@
 @page
 @using AmadouDialloPortfolio.Data
+@using AmadouDialloPortfolio.Services
+@inject VisitorCountService VisitorCountService
 @{
     ViewData["Title"] = "Experience";
     var experiences = PortfolioData.GetExperience();
+    VisitorCountService.IncrementTotalVisits();
+    VisitorCountService.IncrementPageVisit("Experience");
+    var visitorData = VisitorCountService.GetVisitorData();
 }
 
 <h1 class="mb-4">Professional Experience</h1>
@@ -48,4 +53,11 @@
             }
         </div>
     </div>
+</div>
+
+<div class="visitor-counts mt-2">
+    @if (visitorData.PageVisits.TryGetValue("Experience", out var experienceVisits))
+    {
+        <span>Experience Visits: @experienceVisits</span>
+    }
 </div>

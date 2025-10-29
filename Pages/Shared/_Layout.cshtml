@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using AmadouDialloPortfolio.Services
+@inject VisitorCountService VisitorCountService
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -15,9 +17,6 @@
             try {
                 const savedTheme = localStorage.getItem('theme');
                 if (savedTheme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                } else if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    // Use system preference if no saved preference
                     document.documentElement.setAttribute('data-theme', 'dark');
                 }
             } catch (error) {
@@ -60,9 +59,15 @@
         </main>
     </div>
 
+    @{ 
+        var visitorData = VisitorCountService.GetVisitorData();
+    }
+
     <footer class="border-top footer text-muted mt-5">
         <div class="container text-center py-3">
             &copy; 2024 Amadou Diallo - Software Development Engineer
+            <div class="visitor-counts mt-2">
+            </div>
         </div>
     </footer>
 

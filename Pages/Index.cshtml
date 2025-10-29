@@ -1,6 +1,9 @@
 ﻿@page
+@using AmadouDialloPortfolio.Services
+@inject VisitorCountService VisitorCountService
 @{
     ViewData["Title"] = "Home";
+    var visitorData = VisitorCountService.GetVisitorData();
 }
 
 <div class="hero-section text-white mb-5">
@@ -61,4 +64,12 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="visitor-counts mt-2">
+    Total Visits: @visitorData.TotalVisits
+    @if (visitorData.PageVisits.TryGetValue("Home", out var homeVisits))
+    {
+        <span> | Home Page Visits: @homeVisits</span>
+    }
 </div>

@@ -1,5 +1,9 @@
 {
-  "TotalVisits": 0,
-  "PageVisits": {},
+  "TotalVisits": 3,
+  "PageVisits": {
+    "Contact": 1,
+    "Projects": 1,
+    "Experience": 1
+  },
   "ResumeDownloads": 0
 }

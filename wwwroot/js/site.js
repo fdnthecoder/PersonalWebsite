@@ -1,4 +1,4 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Theme toggling functionality
@@ -83,5 +83,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } catch (error) {
         console.error('Error initializing theme functionality:', error);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const downloadLink = document.getElementById('resume-download-link');
+    const countSpan = document.getElementById('resume-download-count');
+    
+    if (downloadLink && countSpan) {
+        let downloadCount = parseInt(localStorage.getItem('resumeDownloadCount')) || 0;
+        
+        function updateCountDisplay() {
+            if (downloadCount > 0) {
+                countSpan.innerText = downloadCount;
+                countSpan.style.display = 'inline';
+            } else {
+                countSpan.style.display = 'none';
+            }
+        }
+
+        updateCountDisplay();
+
+        downloadLink.addEventListener('click', function () {
+            downloadCount++;
+            localStorage.setItem('resumeDownloadCount', downloadCount);
+            updateCountDisplay();
+        });
     }
 });

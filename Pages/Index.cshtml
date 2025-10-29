@@ -21,16 +21,19 @@
                 optimizing infrastructure, and automating ML pipelines. Proven track record in delivering 
                 cost optimizations worth millions and mentoring engineering teams.
             </p>
-            <div class="mt-5">
+            <div class="mt-5 d-flex align-items-center">
                 <a href="/Experience" class="btn btn-light btn-lg me-3">
                     <i class="fas fa-briefcase me-2"></i>View Experience
                 </a>
                 <a href="/Projects" class="btn btn-outline-light btn-lg">
                     <i class="fas fa-code me-2"></i>See Projects
                 </a>
-                <a href="/documents/Amadou_Diallo_Resume.docx.pdf" class="btn btn-outline-light btn-lg ms-3" download>
-                    <i class="fas fa-download me-2"></i>Download Resume
-                </a>
+                <div class="d-inline-flex flex-column align-items-center ms-3">
+                    <a href="/documents/Amadou_Diallo_Resume.docx.pdf" id="resume-download-link" class="btn btn-outline-light btn-lg" download>
+                        <i class="fas fa-download me-2"></i>Download Resume
+                    </a>
+                    <span id="resume-download-count" class="badge bg-light text-dark mt-2"></span>
+                </div>
             </div>
         </div>
     </div>
@@ -65,3 +68,29 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const downloadLink = document.getElementById('resume-download-link');
+            const countSpan = document.getElementById('resume-download-count');
+            
+            let downloadCount = parseInt(localStorage.getItem('resumeDownloadCount')) || 0;
+            
+            function updateCountDisplay() {
+                if (downloadCount > 0) {
+                    countSpan.innerText = `${downloadCount} downloads`;
+                    countSpan.style.display = 'inline-block';
+                }
+            }
+
+            updateCountDisplay();
+
+            downloadLink.addEventListener('click', function () {
+                downloadCount++;
+                localStorage.setItem('resumeDownloadCount', downloadCount);
+                updateCountDisplay();
+            });
+        });
+    </script>
+}

@@ -27,7 +27,7 @@ namespace AmadouDialloPortfolio.Services
             {
                 try
                 {
-                    var initialData = new VisitorData { TotalVisits = 0, PageVisits = new Dictionary<string, int>() };
+                    var initialData = new VisitorData { TotalVisits = 0, PageVisits = new Dictionary<string, int>(), ResumeDownloads = 0 };
                     File.WriteAllText(_filePath, JsonSerializer.Serialize(initialData));
                 }
                 catch (Exception ex)
@@ -45,7 +45,7 @@ namespace AmadouDialloPortfolio.Services
                 {
                     var json = File.ReadAllText(_filePath);
                     var data = JsonSerializer.Deserialize<VisitorData>(json) ?? new VisitorData();
-                    _logger.LogInformation("Retrieved visitor data: TotalVisits={TotalVisits}, PageVisits={PageVisits}", data.TotalVisits, string.Join(", ", data.PageVisits.Select(kv => $"{kv.Key}:{kv.Value}")));
+                    _logger.LogInformation("Retrieved visitor data: TotalVisits={TotalVisits}, PageVisits={PageVisits}, ResumeDownloads={ResumeDownloads}", data.TotalVisits, string.Join(", ", data.PageVisits.Select(kv => $"{kv.Key}:{kv.Value}")), data.ResumeDownloads);
                     return data;
                 }
                 catch (Exception ex)
@@ -85,6 +85,17 @@ namespace AmadouDialloPortfolio.Services
             }
         }
 
+        public void IncrementResumeDownloads()
+        {
+            lock (_lock)
+            {
+                var data = GetVisitorData();
+                data.ResumeDownloads++;
+                _logger.LogInformation("Incrementing resume downloads to: {ResumeDownloads}", data.ResumeDownloads);
+                SaveVisitorData(data);
+            }
+        }
+
         private void SaveVisitorData(VisitorData data)
         {
             lock (_lock)
@@ -107,5 +118,6 @@ namespace AmadouDialloPortfolio.Services
     {
         public long TotalVisits { get; set; }
         public Dictionary<string, int> PageVisits { get; set; } = new Dictionary<string, int>();
+        public int ResumeDownloads { get; set; }
     }
 }
